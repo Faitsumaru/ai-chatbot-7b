@@ -1,5 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+import gradio as gr
 
 # Загрузка модели и токенизатора
 model_name = "meta-llama/Llama-2-7b-chat-hf"  # Пример модели
@@ -28,3 +29,23 @@ def generate_response(prompt):
     # Декодирование ответа
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return response
+
+
+# Функция для обработки запросов через интерфейс
+def chat_interface(user_input):
+    bot_response = generate_response(user_input)
+    return bot_response
+
+# Создание интерфейса
+with gr.Blocks() as demo:
+    gr.Markdown("# Чат-бот на базе Llama2-7B")
+    with gr.Row():
+        user_input = gr.Textbox(label="Ваш вопрос", placeholder="Введите ваш запрос здесь...")
+        submit_button = gr.Button("Отправить")
+    bot_output = gr.Textbox(label="Ответ бота", interactive=False)
+
+    # Привязка функции к кнопке
+    submit_button.click(chat_interface, inputs=user_input, outputs=bot_output)
+
+# Запуск интерфейса
+demo.launch(server_name="0.0.0.0", server_port=7860)
