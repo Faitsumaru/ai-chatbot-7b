@@ -18,3 +18,30 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
 > Version: Apr 2025, created by Gleb 'Faitsuma' Kiryakov
 
 ---
+
+
+## Project Structure
+
+### Code Overview
+1. **Model Loading**:
+   * The project supports two models: **Mistral-7B** and **Llama2-7B**.
+   * Models can be loaded either from the Hugging Face Hub (online mode) or from local files (offline mode).
+   * The code dynamically detects whether a GPU is available and adjusts the device (`cuda` or `cpu`) accordingly.
+
+2. **Tokenization**:
+   * The tokenizer processes user input into tokens that the model can understand.
+   * Special tokens (e.g., `<bos>`, `<eos>`) are handled automatically.
+
+3. **Response Generation**:
+   * The model generates responses using advanced techniques like temperature scaling, top-p sampling, and max token length control.
+   * Responses are decoded back into human-readable text.
+
+4. **Web Interface**:
+   * A Gradio-based web interface allows users to interact with the chatbot via a browser.
+   * The interface includes a text input box for user queries and a text output box for bot responses.
+
+5. **Device Management**:
+   * For GPU setups, 8-bit quantization is supported to reduce memory usage.
+   * For CPU-only setups, 8-bit quantization is disabled, and the model runs in full precision.
+
+---
