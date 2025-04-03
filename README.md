@@ -61,13 +61,13 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
 #### Online Mode
 1. Clone this repository:
 ```
-    git clone https://github.com/your-repo/chatbot-mistral-llama
-    cd chatbot-mistral-llama
+    git clone https://github.com/Faitsumaru/ai-chatbot-7b
+    cd ai-chatbot-7b
 ```
 
 2. Run the script:
 ```
-    python chatbot.py
+    python main.py
 ```
 
 3. Access the Web Interface:
