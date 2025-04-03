@@ -102,3 +102,12 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
    * Open your browser and navigate to `http://localhost:7860`.
 
 ---
+
+
+## Preshow
+
+<div align="center">
+    <img src="images/preshow-chatbot.png" alt="Chatbot Preview">
+</div>
+
+---
