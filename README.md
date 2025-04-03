@@ -45,3 +45,60 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
    * For CPU-only setups, 8-bit quantization is disabled, and the model runs in full precision.
 
 ---
+
+## How to Use
+
+### Prerequisites
+* Install the required dependencies:
+```
+    pip install torch transformers gradio bitsandbytes
+```
+
+---
+
+### Running the Code
+
+#### Online Mode
+1. Clone this repository:
+```
+    git clone https://github.com/your-repo/chatbot-mistral-llama
+    cd chatbot-mistral-llama
+```
+
+2. Run the script:
+```
+    python chatbot.py
+```
+
+3. Access the Web Interface:
+   * Open your browser and navigate to `http://localhost:7860`.
+   * Enter your query in the input box and click "Send" to get a response.
+
+#### Offline Mode
+1. Download the model files:
+   - **Mistral-7B**: Visit the [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1) page on Hugging Face.
+     - Download the following files:
+       - `config.json`
+       - `pytorch_model.bin` (or `model.safetensors`)
+       - `tokenizer.model`
+       - `tokenizer_config.json`
+       - `special_tokens_map.json`
+   - **Llama2-7B**: Visit the [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) page on Hugging Face.
+     - Download the same set of files as above.
+
+2. Place the downloaded files in separate folders, e.g.:
+   - `/path/to/local/mistral-model`
+   - `/path/to/local/llama-model`
+
+3. Update the script to point to the local paths:
+    model_path = "/path/to/local/mistral-model"  # or "/path/to/local/llama-model"
+
+4. Run the script:
+```
+    python main.py
+```
+
+5. Access the Web Interface:
+   * Open your browser and navigate to `http://localhost:7860`.
+
+---
