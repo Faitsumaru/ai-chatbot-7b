@@ -111,3 +111,21 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
 </div>
 
 ---
+
+## Documentation
+
+### Key Libraries and Tools
+* **Hugging Face Transformers**: [Documentation](https://huggingface.co/docs/transformers/index)
+* **Gradio**: [Documentation](https://gradio.app/docs/)
+* **bitsandbytes**: [Installation Guide](https://github.com/TimDettmers/bitsandbytes)
+* **PyTorch**: [Documentation](https://pytorch.org/docs/stable/index.html)
+* **Mistral-7B Model**: [Hugging Face Page](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1)
+* **Llama2-7B Model**: [Hugging Face Page](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)
+
+### Additional Resources
+* **Quantization**: [Bitsandbytes Multi-Backend Support](https://huggingface.co/docs/bitsandbytes/main/en/installation#multi-backend)
+* **SentencePiece Tokenizer**: [GitHub Repository](https://github.com/google/sentencepiece)
+* **CUDA Installation**: [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+* **Python Virtual Environments**: [venv Documentation](https://docs.python.org/3/library/venv.html)
+
+---
