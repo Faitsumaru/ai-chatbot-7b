@@ -129,3 +129,9 @@ The chatbot is built using the **Hugging Face Transformers** library, **Gradio**
 * **Python Virtual Environments**: [venv Documentation](https://docs.python.org/3/library/venv.html)
 
 ---
+
+## Notes
+* **GPU Requirement**: For optimal performance, a GPU with at least 8GB VRAM is recommended. If you don't have a GPU, the model can run on CPU, but it will be slower.
+* **Offline Mode**: Ensure all model files are downloaded and placed in the correct directory before running the script in offline mode.
+* **Authentication**: For online mode, ensure you have a valid Hugging Face token and have accepted the terms of use for the models.
+* **Error Handling**: If you encounter issues, check the device configuration (`cuda` vs. `cpu`) and ensure all dependencies are installed correctly.
